@@ -36,10 +36,10 @@ function App() {
     <>
       <div className='flex h-screen bg-gray-100'>
         {/* Left sidebar for liked albums */}
-        <div className='w-64 bg-green-50 p-4 overflow-y-auto'>
+        <div className='w-64 bg-green-100 p-4 overflow-y-auto'>
           <h2 className='text-lg font-bold mb-4 text-green-800'>Liked Albums</h2>
           {likedAlbums.map((album, index) => (
-            <div key={index} className='mb-2 p-2 bg-green-100 rounded text-sm'>
+            <div key={index} className='mb-2 p-2 bg-green-200 rounded text-sm'>
               <div className="font-semibold">{album.name}</div>
             </div>
           ))}
@@ -64,10 +64,10 @@ function App() {
         </div>
 
         {/* Right sidebar for disliked albums */}
-        <div className='w-64 bg-red-50 p-4 overflow-y-auto'>
-          <h2 className='text-lg font-bold mb-4 text-red-800'>Disliked Albums</h2>
+        <div className='w-64 bg-red-900 p-4 overflow-y-auto'>
+          <h2 className='text-lg font-bold mb-4 text-red-300 '>Disliked Albums</h2>
           {dislikedAlbums.map((album, index) => (
-            <div key={index} className='mb-2 p-2 bg-red-100 rounded text-sm'>
+            <div key={index} className='mb-2 p-2 bg-red-300 rounded text-sm'>
               <div className="font-semibold">{album.name}</div>
             </div>
           ))}
