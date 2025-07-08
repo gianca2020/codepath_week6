@@ -57,7 +57,7 @@ const AlbumCard = ({albumID, onAlbumChange, onAlbumDataChange}) => {
                     <h2 className="mt-4 text-xl font-bold text-gray-800 text-center max-w-80">{albumName}</h2>
                     <button 
                         onClick={handleRandomAlbum}
-                        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-colors duration-200"
+                        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md shadow-lg transition-colors duration-200"
                     >
                         Get Random Album
                     </button>

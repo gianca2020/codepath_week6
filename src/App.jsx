@@ -41,7 +41,6 @@ function App() {
           {likedAlbums.map((album, index) => (
             <div key={index} className='mb-2 p-2 bg-green-100 rounded text-sm'>
               <div className="font-semibold">{album.name}</div>
-              <div className="text-xs text-gray-600">{album.id}</div>
             </div>
           ))}
         </div>
@@ -70,7 +69,6 @@ function App() {
           {dislikedAlbums.map((album, index) => (
             <div key={index} className='mb-2 p-2 bg-red-100 rounded text-sm'>
               <div className="font-semibold">{album.name}</div>
-              <div className="text-xs text-gray-600">{album.id}</div>
             </div>
           ))}
         </div>
