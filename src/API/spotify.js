@@ -31,13 +31,33 @@ const APIController = (function() {
         return data;
     }
 
+    const getRandomAlbum = async (token) => {
+        const res = await fetch(`https://api.spotify.com/v1/browse/new-releases`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        if (!res.ok) throw new Error("Failed to fetch random album");
+        const data = await res.json();
+
+        const albums = data.albums.items;
+        const randomIndex = Math.floor(Math.random() * albums.length);
+        return albums[randomIndex].id;
+    };
+
     return {
         getAlbumData: async function(albumID) {
             const token = await _getToken();
             return getAlbumData(token, albumID);
+        },
+        getRandomAlbum: async function() {
+            const token = await _getToken();
+            return getRandomAlbum(token);
         }
     }
 })();
 
-// Export the getAlbumData function so other components can use it
+// Export the functions so other components can use them
 export const getAlbumData = APIController.getAlbumData;
+export const getRandomAlbum = APIController.getRandomAlbum;

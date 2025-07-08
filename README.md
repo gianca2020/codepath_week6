@@ -11,8 +11,8 @@ A React app that displays random album covers from Spotify's API.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/gianca2020/codepath_week6.git
-cd codepath_week6
+git clone <your-repo-url>
+cd week_5
 ```
 
 ### 2. Install dependencies
