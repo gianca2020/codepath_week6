@@ -38,15 +38,22 @@ const AlbumCard = ({albumID}) => {
     }, [currentAlbumID]);
 
     return(
-        <div>
-            <button onClick={handleRandomAlbum}>Get Random Album</button>
+        <div className="flex flex-col items-center">
             {coverUrl ? (
-                <img src={coverUrl} alt="Album Cover"  />
+                <>
+                    <img src={coverUrl} alt="Album Cover" className="w-80 h-80 object-cover  shadow-lg" />
+                    <button 
+                        onClick={handleRandomAlbum}
+                        className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-2xl shadow-lg transition-colors duration-200"
+                    >
+                        Get Random Album
+                    </button>
+                </>
             ) : (
-                <p>Loading...</p>
-            )
-        }
-            
+                <div className="w-80 h-80 flex items-center justify-center bg-gray-200 ">
+                    <p className="text-gray-600">Loading...</p>
+                </div>
+            )}
         </div>
     )
 }
