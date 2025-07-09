@@ -32,6 +32,15 @@ function App() {
     setLikedAlbums(prev => prev.filter(album => album.id !== albumID));
   };
 
+  // Add these new functions:
+  const handleRemoveLiked = (albumID) => {
+    setLikedAlbums(prev => prev.filter(album => album.id !== albumID));
+  };
+
+  const handleRemoveDisliked = (albumID) => {
+    setDislikedAlbums(prev => prev.filter(album => album.id !== albumID));
+  };
+
   return (
     <>
       <div className='flex h-screen bg-gray-100'>
@@ -39,7 +48,12 @@ function App() {
         <div className='w-64 bg-green-100 p-4 overflow-y-auto'>
           <h2 className='text-lg font-bold mb-4 text-green-800'>Liked Albums</h2>
           {likedAlbums.map((album, index) => (
-            <div key={index} className='mb-2 p-2 bg-green-200 rounded text-sm'>
+            <div 
+              key={index} 
+              className='mb-2 p-2 bg-green-200 rounded text-sm cursor-pointer hover:bg-green-300 transition-colors duration-200'
+              onClick={() => handleRemoveLiked(album.id)}
+              title="Click to remove from liked albums"
+            >
               <div className="font-semibold">{album.name}</div>
             </div>
           ))}
@@ -65,9 +79,14 @@ function App() {
 
         {/* Right sidebar for disliked albums */}
         <div className='w-64 bg-red-900 p-4 overflow-y-auto'>
-          <h2 className='text-lg font-bold mb-4 text-red-300 '>Disliked Albums</h2>
+          <h2 className='text-lg font-bold mb-4 text-white'>Disliked Albums</h2>
           {dislikedAlbums.map((album, index) => (
-            <div key={index} className='mb-2 p-2 bg-red-300 rounded text-sm'>
+            <div 
+              key={index} 
+              className='mb-2 p-2 bg-red-300 rounded text-sm cursor-pointer hover:bg-red-400 transition-colors duration-200'
+              onClick={() => handleRemoveDisliked(album.id)}
+              title="Click to remove from disliked albums"
+            >
               <div className="font-semibold">{album.name}</div>
             </div>
           ))}
