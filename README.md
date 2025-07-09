@@ -1,55 +1,69 @@
-# Spotify Album Cover Generator
+# Web Development Project 4 - *Project 4*
 
-A React app that displays random album covers from Spotify's API.
+Submitted by: **Giancarlo Forero**
 
-## Features
-- Display album covers from Spotify
-- Random album selection
-- Clean, modern UI
+This web app: **A simple web app that allows users to organize which new albums they like and dislike**
 
-## Setup Instructions
+Time spent: **7** hours spent in total
 
-### 1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd week_5
-```
+## Required Features
 
-### 2. Install dependencies
-```bash
-npm install
-```
+The following **required** functionality is completed: 
 
-### 3. Set up Spotify API
-1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-2. Create a new app
-3. Copy your Client ID and Client Secret
-4. Create a `.env` file in the root directory:
-```bash
-cp .env.example .env
-```
-5. Replace the values in `.env` with your actual Spotify credentials:
-```
-VITE_SPOTIFY_CLIENT_ID=your_actual_client_id
-VITE_SPOTIFY_CLIENT_SECRET=your_actual_client_secret
-```
+- [x] **Application features a button that creates a new API fetch request on click and displays at least three attributes and an image obtained from the returned JSON data**
+  - The type of attribute displayed for each image should be consistent across API calls (i.e. if you are using a cat API, and display the color, breed, and age in response to an initial API call, subsequent button clicks should also result in the color, breed, and age being displayed)
+- [x] **Only one item/data from API call response is viewable at a time and at least one image is displayed per API call**
+  - A single result of an API call is displayed at a time 
+  - Displayed attributes should match the displayed image (i.e., if showing a picture of a Siamese cat and the attribute breed, the displayed breed should be 'Siamese' not 'Ragdoll' or another breed that doesn't match)
+  - There is at least one image per API call
+- [x] **API call response results should appear random to the user**
+  - Clicking on the API call button should generate a seemingly random new result each time
+  - Note: Repeat results are permitted but the API used should have a reasonably large amount of data and repeats should not be frequent
+- [ ] **Clicking on a displayed value for one attribute adds it to a displayed ban **list**
+  - At least one attribute for each API result should be clickable
+  - Clicking on a clickable attribute not on the ban list, should imnmediately add it to the ban list 
+  - Clicking on an attribute in the ban list should immediately remove it from the ban list 
+- [ ] **Attributes on the ban list prevent further images/API results with that attribute from being displayed**
+  - Clicking on the API call button should not result in any image/attributes with attribute values in the ban list being displayed (ex. Using a cat API, if the ban list includes the value 'Siberian' for the breed attribute, clicking on the Discover button should never result in a Siberian cat being displayed)
+  - Note: More attribute values on the ban list may result in a higher frequency of repeat results
+  -  [ ] _To ensure an accurate grade, your recording **must** show that when clicked, an attribute in the ban list is immediately removed from the list of banned attributes_
 
-### 4. Run the development server
-```bash
-npm run dev
-```
 
-## Tech Stack
-- React
-- Vite
-- Spotify Web API
+The following **optional** features are implemented:
 
-## Project Structure
-```
-src/
-├── components/
-│   └── AlbumCard.jsx    # Component for displaying album covers
-├── API/
-│   └── spotify.js       # Spotify API integration
-└── App.jsx              # Main app component
-```
+- [ ] Multiple types of attributes are clickable and can be added to the ban list
+- [x] Users can see a stored history of their previously displayed  results from this session
+  - A dedicated section of the application displays all the previous images/attributes seen before
+  - Each time the API call button is clicked, the history updates with the newest API result
+
+The following **additional** features are implemented:
+
+* [ ] List anything else that you added to improve the site's functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='[http://i.imgur.com/link/to/your/gif/file](https://imgur.com/a/lFff8rY).gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+
+## Notes
+
+Describe any challenges encountered while building the app.
+
+## License
+
+    Copyright [2025] [Giancarlo Forero]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
