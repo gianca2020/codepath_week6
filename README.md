@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 - [x] **API call response results should appear random to the user**
   - Clicking on the API call button should generate a seemingly random new result each time
   - Note: Repeat results are permitted but the API used should have a reasonably large amount of data and repeats should not be frequent
-- [ ] **Clicking on a displayed value for one attribute adds it to a displayed ban **list**
+- [x ] **Clicking on a displayed value for one attribute adds it to a displayed ban **list**
   - At least one attribute for each API result should be clickable
   - Clicking on a clickable attribute not on the ban list, should imnmediately add it to the ban list 
   - Clicking on an attribute in the ban list should immediately remove it from the ban list 
@@ -31,7 +31,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Multiple types of attributes are clickable and can be added to the ban list
+- [x ] Multiple types of attributes are clickable and can be added to the ban list
 - [x] Users can see a stored history of their previously displayed  results from this session
   - A dedicated section of the application displays all the previous images/attributes seen before
   - Each time the API call button is clicked, the history updates with the newest API result
@@ -44,13 +44,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='[http://i.imgur.com/link/to/your/gif/file](https://imgur.com/a/lFff8rY).gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/KKy4Vs2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I guess my issues was trying to uploadthe porject without giving out the API key, im unsure how to upload the env wihtout sending out valuable information, thouhg alot of what was marked incorrec was presnet
 
 ## License
 
